@@ -6,7 +6,7 @@ A quick example of Python 3.10 modules implemented in C using the Python/C and N
 ```
 make all
 python -c "import hello, numpy; hello.greet(numpy.array('World'))"
-python -c "import fib, numpy; print fib.fib(5)"
+python -c "import fib, numpy; print(fib.fib(5))"
 make clean
 ```
 
