@@ -1,12 +1,12 @@
-Python/C API quick start
+NumPy C-API quick start
 =========================
 
-A quick example of Python 3.10 modules implemented in C using the Python/C API.
+A quick example of Python 3.10 modules implemented in C using the Python/C and NumPy APIs.
 
 ```
 make all
 python -c "import hello; hello.greet('World')"
-python -c "import fib; print(fib.fib(5))"
+python -c "import fib; print fib.fib(5)"
 make clean
 ```
 
@@ -17,7 +17,7 @@ file. The Makefile is here only to debunk Python's magic.
 ## Steps
 
 1. Write a `foobarmodule.c` C file.
-   Note the `#include <Python.h>` at the beginning of example files.
+   Note the `#include <Python.h>`, `#include <numpy/numpyconfig.h>`, and `#include <numpy/arrayobject.h>` at the beginning of example files.
 2. Compile `foobarmodule.c` and produce a `foobar.so` file.
    See the Makefile for details.
 3. Put `foobar.so` in a folder listed in the Python path.
